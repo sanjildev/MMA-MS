@@ -1,0 +1,25 @@
+{
+    "slides":[
+        {
+        "src":"/images/background1.png",
+        "alt":"This Is Image 2",
+        "p":"OCTAVERSE MMA NEPAL",
+        "button":"FIGHTERS ",
+        "link":"/fighters"
+    },
+    {
+        "src":"/images/background2.png",
+        "alt":"This Is Image 2",
+          "p":"OCTAVERSE MMA NEPAL",
+        "button":"NEWS",
+         "link":"/news"
+    },
+    {
+        "src":"/images/background4.png",
+        "alt":"This Is Image 3",
+          "p":"OCTAVERSE MMA NEPAL",
+        "button":"ABOUT US",
+         "link":"/about-us"
+    }
+]
+}
