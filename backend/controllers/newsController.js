@@ -1,4 +1,5 @@
 const News = require('../models/News');
+const cloudinary = require('../config/cloudinaryConfig'); // Import the cloudinary configuration
 
 // Get all news
 const getNews = async (req, res) => {
@@ -13,11 +14,20 @@ const getNews = async (req, res) => {
 // Add a new news article
 const addNews = async (req, res) => {
     try {
+        let photoUrl = null;
+        
+        // Upload to Cloudinary if there's a photo
+        if (req.file) {
+            const result = await cloudinary.uploader.upload(req.file.path); // Upload to Cloudinary
+            photoUrl = result.secure_url; // Cloudinary provides a secure URL after upload
+        }
+
         const newNews = new News({
             title: req.body.title,
             content: req.body.content,
-            photo: req.file ? req.file.filename : null // Handle the uploaded photo if exists
+            photo: photoUrl, // Store the Cloudinary URL in the database
         });
+
         await newNews.save();
         res.status(201).json(newNews);
     } catch (error) {
@@ -28,7 +38,20 @@ const addNews = async (req, res) => {
 // Update a news article
 const updateNews = async (req, res) => {
     try {
-        const updatedNews = await News.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        let updatedPhotoUrl = req.body.photo; // If photo isn't being uploaded, keep existing URL
+
+        // Upload a new photo if one is provided
+        if (req.file) {
+            const result = await cloudinary.uploader.upload(req.file.path);
+            updatedPhotoUrl = result.secure_url; // Get the new Cloudinary URL
+        }
+
+        const updatedNews = await News.findByIdAndUpdate(
+            req.params.id, 
+            { ...req.body, photo: updatedPhotoUrl }, 
+            { new: true } // Return the updated document
+        );
+
         res.json(updatedNews);
     } catch (error) {
         res.status(400).json({ message: error.message });

@@ -10,7 +10,7 @@
   width: 100%;
   height: 100vh;
   z-index: 2;
-  padding: 8rem;
+  padding:1rem 2rem;
   color: white;
   background-color: black;
   font-size: 4rem;
@@ -26,15 +26,18 @@ top: 10rem;
 .newsDiv h3{
   font-family: 'Cedarville Cursive';
   color: #2454D7;
+  font-size: 4rem;
 }
 .newsDiv h1{
+  font-size: 5rem;
   text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 .newsWrapper {
   width: 50%;
   display: flex;
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding: 1.5rem;
   border-radius: .8rem;
   box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.1);
@@ -69,6 +72,24 @@ top: 10rem;
   margin: 5px 0;
   line-height: 1.6;
 }
+.moreNews{
+margin-left: 37rem;
+font-size: 1.5rem;
+font-family: 'Roboto';
+text-transform: uppercase;
+padding:3rem 5rem;
+color: white;
+outline: none;
+border: none;
+border-radius: 1rem;
+cursor: pointer;
+font-weight: 600;
+background-color: #171310;
+transition: all ease-in-out .5s;
+  }
+  .moreNews:hover{
+    background-color: #2454D7;
+  }
   @media (max-width: 1024px)
   {
     .carousel-img{
@@ -83,7 +104,7 @@ margin-bottom: 0;
     width: 100%;
     height: 100vh;
     z-index: 2;
-    padding: 4rem;
+    padding: 4rem 2rem;
     color: white;
     background-color: black;
     font-size: 4rem;
@@ -91,35 +112,75 @@ margin-bottom: 0;
   
   }
   .newsDiv h3{
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
   .newsDiv h1{
-    font-size: 3.5rem;
+    font-size: 3rem;
+    margin-bottom: 0rem;
   }
   .newsDiv .bgNepal{
+    z-index: -1;
     position: absolute;
-    width: 50rem;
-    right: 0rem;
-    top: 13.8rem;
+    width: 40rem;
+    height: 90vh;
+    object-fit: cover;
+    right:2rem;
+    top:6rem;
     }
 .newsWrapper{
-  width: 50%;
-  height: 25vh;
+  width: 60%;
+  height: 15vh;
   display: flex;
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   padding: 1.5rem;
   border-radius: .8rem;
   box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.1);
   align-items: center;
 }
-    .newsImage img {
-      cursor: pointer;
-      border: 2px solid white;
-      font-size: 2rem;
-      border-radius: .8rem;
-      object-fit: cover;
+.newsImage{
+  width: 28%;
+  margin-top: 7rem;
+}
+.newsImg {
+padding-top: 4rem;
+cursor: pointer;
+ width: 15rem;
+  height: 2rem;
+  object-position: center;
+  border-radius: .8rem;
+  object-fit: cover;
+}
+    .newsContent{
+     margin-top: 9rem;
     }
+    .newsContent h2{
+      font-size: 1.2rem;
+    }
+    .newsContent p{
+      text-shadow:-1rem 1rem 3rem  rgb(55, 0, 255);
+      font-size: 1.1rem;
+      
+    }
+    .moreNews{
+      margin-top: 4.3rem;
+margin-left: 28rem;
+font-size: 1rem;
+font-family: 'Roboto';
+text-transform: uppercase;
+padding:2rem 2.5rem;
+color: white;
+outline: none;
+border: none;
+border-radius: 1rem;
+cursor: pointer;
+font-weight: 600;
+background-color: #171310;
+transition: all ease-in-out .5s;
+  }
+  .moreNews:hover{
+    background-color: #2454D7;
+  }
   }
   .fightersDiv {
     display: flex;
@@ -228,4 +289,51 @@ transition: all ease-in-out .5s;
   }
   .moreFighters:hover{
     background-color: #2454D7;
+  }
+  @media (max-width: 1024px){
+    .fightersDiv{
+      padding: 2rem;
+    }
+    .fightersDiv h3 {
+    font-size: 2.8rem;
+    font-family: 'Cedarville Cursive';
+    color: #2454D7;
+  }
+  .fightersDiv h1 {
+    font-family: 'Roboto';
+    color: black;
+    text-transform: uppercase;
+    font-size: 4rem;
+  }
+  .fighterWrapper {
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+    overflow: hidden;
+  }
+  .fighterImage img {
+    width: 40rem;
+    height:40rem;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .fighterContent h2 {
+    font-size: 3rem;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .fighterContent p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  .fighterContent strong{
+    color: #2454D7;
+    font-size: 2rem;
+  }
+  .moreFighters{
+    padding: 2rem;
+    font-size: 1.3rem;
+  }
   }

@@ -15,8 +15,7 @@ const Footer = () => {
             <li><NavLink to="/" activeClassName="active-link">Home</NavLink></li>
             <li><NavLink to="/news" activeClassName="active-link">News</NavLink></li>
             <li><NavLink to="/fighters" activeClassName="active-link">Fighter Profiles</NavLink></li>
-            <li><NavLink to="/events" activeClassName="active-link">Events</NavLink></li>
-            <li><NavLink to="/contact" activeClassName="active-link">Contact</NavLink></li>
+            <li><NavLink to="/about-us" activeClassName="active-link">About Us</NavLink></li>
           </ul>
         </div>
         <div className="footer-social">

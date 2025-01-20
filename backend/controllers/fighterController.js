@@ -1,4 +1,5 @@
 const Fighter = require('../models/fighter');
+const cloudinary = require('../config/cloudinaryConfig'); // Assuming cloudinaryConfig.js is already set up
 
 // Get all fighters
 const getFighters = async (req, res) => {
@@ -18,7 +19,9 @@ const addFighter = async (req, res) => {
 
         // Check if a photo was uploaded
         if (req.file) {
-            fighterData.photo = req.file.path; // Store the photo path in the database
+            // Upload image to Cloudinary
+            const result = await cloudinary.uploader.upload(req.file.path);
+            fighterData.photo = result.secure_url; // Store Cloudinary URL in the database
         }
 
         // Create a new fighter instance
@@ -38,7 +41,9 @@ const updateFighter = async (req, res) => {
 
         // Check if a new photo was uploaded
         if (req.file) {
-            updatedFighterData.photo = req.file.path; // Store the new photo path in the database
+            // Upload the new image to Cloudinary
+            const result = await cloudinary.uploader.upload(req.file.path);
+            updatedFighterData.photo = result.secure_url; // Update the photo field with the Cloudinary URL
         }
 
         // Update the fighter's information in the database

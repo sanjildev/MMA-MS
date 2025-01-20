@@ -1,0 +1,89 @@
+.about-us-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: white;
+}
+
+.about-us-header h1 {
+  font-size:3.5rem;
+  margin-bottom: 1.9rem;
+  color: white;
+}
+
+.about-us-header p {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #f4f4f4;
+}
+.about-us-content {
+  margin: 2rem auto;
+  max-width: 130rem;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  
+  color: #ccc;
+}
+
+.about-us-visuals img {
+width: 15rem;
+filter: invert();
+}
+
+.about-us-cta {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.about-us-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.about-us-cta p {
+  font-size: 1.9rem;
+  margin-bottom: 2.9rem;
+  color: white;
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #007bff; /* Change to your brand color */
+  transform: scale(1.1);
+}
+@media (max-width: 1024px){
+  .about-us-header h1 {
+    font-size:2.8rem;
+    margin-bottom: 1.4rem;
+    color: white;
+  }
+  .about-us-content {
+    margin: 2rem auto;
+    max-width: 130rem;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #ccc;
+  }
+  .about-us-visuals img {
+    width: 12rem;
+    filter: invert();
+    }
+    .about-us-cta p {
+      font-size: 1.5rem;
+      margin-bottom: 2.2rem;
+      color: white;
+    }
+
+    
+}
+

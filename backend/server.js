@@ -13,6 +13,13 @@ app.use(cors({ origin: '*' }));
 // Serve static files from the "uploads" folder
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// Cloudinary Configuration (Ensure it's in your cloudinaryConfig.js)
+const cloudinary = require('./config/cloudinaryConfig'); // Adjust path if needed
+if (!cloudinary.config().cloud_name) {
+  console.error("Cloudinary not configured properly. Please check your .env file.");
+  process.exit(1); // Exit server if Cloudinary is not configured
+}
+
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('MongoDB connected'))

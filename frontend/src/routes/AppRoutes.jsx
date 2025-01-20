@@ -6,7 +6,6 @@ import AboutUs from '../pages/AboutUs';
 import Fighters from '../pages/Fighters';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
-
 function AppRoutes() {
     return (
         <Routes>
