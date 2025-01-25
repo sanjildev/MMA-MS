@@ -28,8 +28,23 @@ router.post('/login', async (req, res) => {
         const isMatch = await user.matchPassword(password);
         if (!isMatch) return res.status(400).json({ message: 'Invalid email or password' });
 
+        // No role check since all users are considered admins
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
         res.json({ token });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+// Delete User
+router.delete('/delete/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        const user = await User.findById(id);
+        if (!user) return res.status(404).json({ message: 'User not found' });
+
+        await User.findByIdAndDelete(id);
+        res.json({ message: 'User deleted successfully' });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }

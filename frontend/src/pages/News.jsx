@@ -30,7 +30,7 @@ const News = () => {
   const displayedNews = news.slice(0, currentPage * itemsPerPage);
 
   return (
-    <div className="news-section">
+    <div className="news-section1">
       <h1>Latest News</h1>
       {displayedNews.map((item) => (
         <div key={item._id} className="news-card">

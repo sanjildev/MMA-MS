@@ -1,9 +1,9 @@
 /* News Section */
-.news-section {
+.news-section1 {
   padding: 7rem;
 }
 
-.news-section h1 {
+.news-section1 h1 {
   font-size: 3.8rem;
   text-align: center;
   margin-bottom: 6rem;
@@ -93,7 +93,7 @@
         padding: 2rem;
       }
       .news-content {
-        margin-top: 4.3rem;
+        margin-top: 4.1rem;
        }
       .news-content h2 {
         font-size:1.7rem;

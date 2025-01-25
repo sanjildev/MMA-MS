@@ -14,7 +14,6 @@ const Header = () => {
            <NavLink to='/fighters'>Fighters</NavLink>
            <NavLink to='/about-us'>About Us</NavLink>
            <NavLink to='/login'>Log In</NavLink>
-           <NavLink to='/register'>Register</NavLink>
             </div>
             </div>
             <div className="social_media">

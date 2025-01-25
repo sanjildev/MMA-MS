@@ -1,15 +1,15 @@
 .carousel-container {
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     overflow: hidden;
     position: absolute;
-    left: 48rem;
+    left: 38rem;
     top: -2rem;
   }
   
   .carousel-container img {
- width: 90rem;
- height: 90rem;
+ width: 60rem;
+ height: 60rem;
  object-fit: cover;
   }
   
@@ -18,18 +18,18 @@
     z-index: 10; /* Ensure arrows are on top of other elements */
 }
 button.slick-prev:before {
-    left: 130rem;
-    top: 35rem;
+    left: 89rem;
+    top: 20rem;
     position: absolute;
     /* Ensure arrows contrast against the background */
-    font-size: 4rem; /* Adjust arrow size */
+    font-size: 3rem; /* Adjust arrow size */
 }
 button.slick-next:before {
     position: absolute;
-    right: 54rem;
-    top: 35rem;
+    right: 43rem;
+    top: 20rem;
  /* Ensure arrows contrast against the background */
-    font-size: 4rem; /* Adjust arrow size */
+    font-size: 3rem; /* Adjust arrow size */
 }
 .slide {
 position: relative;
@@ -41,28 +41,28 @@ overflow: hidden;
     color: white;
     z-index: 10;
     position: absolute;
-    top: 42rem;
-    left: 11rem;
+    top: 30rem;
+    left: 1rem;
     font-size: 6rem;
 }
 .slide .fightersCarousel{
     text-transform: uppercase;
-    letter-spacing: 2rem;
+    letter-spacing: 1rem;
     color: white;
     z-index: 10;
     position: absolute;
-    top:42rem;
-    left:.7rem;
-    font-size: 6rem;
+    top:30rem;
+    left:2rem;
+    font-size: 5rem;
 }
 .slide a{
     text-decoration: none;
     color: white;
   text-transform: uppercase;
   position: absolute;
-  top: 60rem;
-  left: 31rem;
-  font-size: 3rem;
+  top: 20rem;
+  left: 35rem;
+  font-size: 2rem;
   border: none;
   font-weight: 600;
   background-color:#2454D7;
@@ -74,18 +74,18 @@ transition: all linear .2s;
 }
 .slide .carousel-btn1{
     position: absolute;
-    top: 58rem;
-    left: 35rem;
-    font-size: 3rem;
-    padding:2rem 5rem;
+    top: 40rem;
+    left: 23rem;
+    font-size: 2rem;
+    padding:2rem 4rem;
 }
 .slide .carousel-btn2{
     position: absolute;
-  top: 55rem;
-  left: 31rem;
-  font-size: 3rem;
+  top: 40rem;
+  left: 21rem;
+  font-size: 2rem;
   border: none;
-  padding:2rem 5rem;
+  padding:2rem 4rem;
 }
 @media (max-width: 1024px){
     .carousel-container {

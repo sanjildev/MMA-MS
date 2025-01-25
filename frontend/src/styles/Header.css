@@ -30,13 +30,13 @@ justify-content: space-between;
 .logo{
     margin-top: 1rem;
     filter: invert();
-    width: 10%;
+    width: 15%;
 }
 .logo img{
     width: 10rem;
 }
 .navbar{
-    width: 50%;
+    width: 70%;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
@@ -93,10 +93,10 @@ font-size: 1.5rem;
     .logo{
         margin-top: 1rem;
         filter: invert();
-        width: 20%;
+        width: 30%;
     }
     .navbar{
-        width: 70%;
+        width: 80%;
         display: flex;
         align-items: center;
         font-size: 1.4rem;
